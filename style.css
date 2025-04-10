@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+head{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f6f0ee;
+}
+h1, p{
+    color: #131111;
+    font-family: 'Inter', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    border-bottom: 0.1px solid #ec7c74;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(113, 41, 35, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    gap: 40px; 
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0; 
+    display: flex;
+    justify-content: space-around;
+    gap: 200px;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: #f6f0ee; 
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; 
+    transition: color 0.3s ease;
+    justify-content: space-around; 
+}
+nav ul li a img{
+    position: sticky;
+}
+
+nav img {
+    width: 50px;
+    height: 50px; 
+    margin-left: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #f6f0ee;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0px; 
+    height: 2px;
+    background-color: #ec7c74;
+    bottom: 0px;
+    left: 0px;
+    transition: width 0.3s ease; 
+}
+nav a:hover:after {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #f6f0ee;
+    background-color: #712923;
+}
+
+main {
+    margin-top: 80px;  /* Add space for fixed nav */
+}
+
+.first-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid #f6f0ee;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 15px;
+    margin-top: 150px;
+    min-height: 300px;
+}
+
+.text-content {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.start {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: auto;
+    background-color: #712923;
+    color: #f6f0ee;
+    font-size: 14px;
+    padding: 8px 16px;
+    width: fit-content;
+    border: 1px solid #712923;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s ease;
+}
+
+.start:hover {
+    background-color: #ec7c74;
+    color: #131111;
+    border: 1px solid #ec7c74;
+    animation: shadowExample 2s infinite;
+    top: -8px;
+}
+
+.first-section h1 {
+    grid-column: 1;
+    color: #131111;
+    font-size: 36.7px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 1;
+    display: flex;
+}
+.first-section p{
+    grid-column: 1;
+    color: #131111;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.first-section img {
+    width: 200px;
+    height: auto;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.school-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.EDUCATION {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto;
+    gap: 30px;
+}
+
+.EDUCATION h1 {
+    margin-bottom: 30px;
+}
+
+.EDUCATION p {
+    margin: 5px 0;
+}
+
+.EDUCATION .school-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.EDUCATION .school-info img {
+    justify-self: start;
+    margin-right: auto;
+}
+
+.EDUCATION .school-info .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-self: start;
+}
+
+.EDUCATION .olfu-info {
+    grid-template-columns: 1fr auto;
+}
+
+.EDUCATION .olfu-info img {
+    justify-self: end;
+}
+
+.EDUCATION .olfu-info .text {
+    justify-self: end;
+    text-align: right;
+}
+
+.Awards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 50px auto;
+    gap: 30px;
+    text-align: center;
+}
+
+.Awards h1 {
+    margin-bottom: 30px;
+}
+
+.about-me {
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    background-color: #712923; 
+    color: #f6f0ee; 
+    font-family: 'Inter', sans-serif;
+    font-size: 14px; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.portfolio-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+}
+
+.portfolio-section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #712923, #ec7c74);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.portfolio-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(113, 41, 35, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    padding: 20px;
+    color: #f6f0ee;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.view-project {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: 2px solid #f6f0ee;
+    border-radius: 25px;
+    color: #f6f0ee;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-project:hover {
+    background: #f6f0ee;
+    color: #712923;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .first-section {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        gap: 20px;
+    }
+
+    .first-section {
+        margin-left: 50px;
+        margin-right: 50px;
+        grid-template-columns: 1fr;
+    }
+
+    .first-section img {
+        grid-column: 1;
+        grid-row: 1;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .text-content {
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .first-section h1 {
+        justify-content: center;
+        font-size: 28px;
+    }
+
+    .start {
+        margin: 20px auto;
+    }
+
+    .EDUCATION, .Awards {
+        padding: 0 20px;
+    }
+
+    .school-info, .olfu-info {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: 20px;
+    }
+
+    .school-info img, .olfu-info img {
+        justify-self: center !important;
+        margin: 0 auto !important;
+    }
+
+    .school-info .text, .olfu-info .text {
+        justify-self: center !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 8px 15px;
+    }
+    
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .first-section {
+        margin: 100px 15px 0;
+        padding: 10px;
+    }
+
+    .first-section h1 {
+        font-size: 24px;
+    }
+
+    .school-info, .olfu-info {
+        padding: 0 10px;
+    }
+
+    .about-me {
+        padding: 0 15px;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .portfolio-section h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .first-section h1 {
+        font-size: 22px;
+    }
+
+    .first-section p {
+        font-size: 14px;
+    }
+
+    .start {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .school-info, .olfu-info {
+        gap: 15px;
+    }
+
+    .school-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .EDUCATION p, .Awards p {
+        font-size: 14px;
+    }
+
+    .portfolio-section {
+        padding: 20px 10px;
+    }
+    
+    .portfolio-section h1 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+
+
+
